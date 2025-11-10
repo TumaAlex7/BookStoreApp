@@ -76,7 +76,7 @@ namespace BookStoreApp
                 Console.WriteLine("\nПервая книга Роберта Мартина:");
                 try
                 {
-                    var bookByAuthor = catalog[("Robert C. Martin", 0)];
+                    var bookByAuthor = catalog[("Robert C. Martin", 1)];
                     Console.WriteLine(bookByAuthor);
                 }
                 catch (Exception ex)

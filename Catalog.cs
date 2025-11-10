@@ -7,7 +7,7 @@ namespace BookStoreApp
 {
     public class Catalog : IReadOnlyCollection<Book>
     {
-        private Dictionary<string, Book> _items = [];
+        private readonly Dictionary<string, Book> _items = [];
 
         public int Count => _items.Count;
 
@@ -65,7 +65,7 @@ namespace BookStoreApp
 
     public class CatalogEnumerator(Dictionary<string, Book> items) : IEnumerator
     {
-        private Dictionary<string, Book> _items = items;
+        private readonly Dictionary<string, Book> _items = items;
         int index = -1;
 
         public bool MoveNext()

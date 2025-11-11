@@ -5,9 +5,8 @@ namespace BookStoreApp
 {
     public class BookStore(Catalog catalog)
     {
-        // Т.к. в методах нет изменения _catalog логично сделать его readonly
-        // однако так как у нас есть два readonly доступа, логично заменить их на один
-        public Catalog Catalog {get; private set;} = catalog;
+        // Использованию публичного аксессора чтения к readonly приватному полю аналогично:
+        public Catalog Catalog {get; } = catalog;
 
         public void Rent(string isbn)
         {
